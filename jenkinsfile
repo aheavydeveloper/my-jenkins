@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools {
-        maven 'myMaven' // Replace with the name you specified in the Global Tool Configuration
-    }
+    // tools {
+    //     maven 'myMaven' // Replace with the name you specified in the Global Tool Configuration
+    // }
  
     stages {
         stage('Build') {
@@ -10,7 +10,7 @@ pipeline {
                 echo 'Building the application...'
                 echo 'BUILDID - $BUILD_ID'
                 echo "PATH - $env.PATH"
-                sh 'mvn -v'
+                // sh 'mvn -v'
             }
         }
 

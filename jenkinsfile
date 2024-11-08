@@ -3,11 +3,13 @@ pipeline {
     tools {
         maven 'myMaven' // Replace with the name you specified in the Global Tool Configuration
     }
-
+ 
     stages {
         stage('Build') {
             steps {
                 echo 'Building the application...'
+                echo 'BUILDID - $BUILD_ID'
+                echo 'PATH - $PATH'
                 sh 'mvn -v'
             }
         }

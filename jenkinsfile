@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                echo 'BUILDID - $BUILD_ID'
+                echo "BUILDID - $BUILD_ID" 
                 echo "PATH - $env.PATH"
                 // sh 'mvn -v'
             }
